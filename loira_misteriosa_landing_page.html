@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Loira Misteriosa — perfil adulto em Presidente Prudente. Entre em contato para consultar disponibilidade e combinar os detalhes.">
+  <title>Loira Misteriosa | Presidente Prudente</title>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --panel: #151515;
+      --gold: #d7b878;
+      --gold-light: #f3dfb0;
+      --text: #f7f3ec;
+      --muted: #bdb5a8;
+      --line: rgba(215,184,120,.25);
+      --whatsapp: #25d366;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background:
+        radial-gradient(ellipse at 50% 0%, rgba(215,184,120,.11), transparent 45%),
+        var(--bg);
+      color: var(--text); font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6; min-height: 100vh;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 32px, 1040px); margin: 0 auto; }
+    header { padding: 22px 0; }
+    .brand { display: flex; justify-content: center; align-items: center; gap: 10px; color: var(--gold); letter-spacing: .22em; font-size: .78rem; text-transform: uppercase; }
+    .brand-mark { border: 1px solid var(--gold); width: 28px; height: 28px; display: grid; place-items: center; transform: rotate(45deg); }
+    .brand-mark span { transform: rotate(-45deg); font-family: Georgia, serif; font-size: 1rem; }
+    main { padding: 16px 0 54px; }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+    .portrait {
+      position: relative; min-height: 340px; overflow: hidden; border-radius: 22px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(10,10,10,.02) 20%, rgba(10,10,10,.86) 100%),
+        radial-gradient(ellipse at 50% 24%, rgba(215,184,120,.24), transparent 45%),
+        linear-gradient(145deg, #27211a, #101010 70%);
+      display: flex; align-items: end; justify-content: center; padding: 26px;
+    }
+    .portrait::before {
+      content: "LM"; position: absolute; top: 24px; left: 50%; transform: translateX(-50%);
+      color: rgba(243,223,176,.16); font: clamp(7rem, 25vw, 13rem)/1 Georgia, serif; letter-spacing: -.08em;
+    }
+    .portrait-note { position: relative; z-index: 1; text-align: center; color: var(--muted); font-size: .78rem; max-width: 280px; }
+    .portrait-note strong { display: block; color: var(--gold-light); font-size: .9rem; font-weight: 500; margin-bottom: 5px; }
+    .eyebrow { color: var(--gold); font-size: .73rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h1 { font: 500 clamp(2.55rem, 12vw, 5rem)/1.02 Georgia, "Times New Roman", serif; letter-spacing: -.045em; margin: 13px 0 18px; }
+    h1 em { color: var(--gold-light); font-weight: 400; }
+    .intro { color: #d6d0c6; font-size: 1.02rem; max-width: 550px; }
+    .availability { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: var(--gold-light); font-size: .8rem; margin: 10px 0 18px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px rgba(215,184,120,.7); }
+    .cta {
+      display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%;
+      background: var(--gold); color: #17130c; padding: 15px 20px; border-radius: 12px;
+      text-decoration: none; font-weight: 800; letter-spacing: .025em; transition: transform .18s, filter .18s;
+      box-shadow: 0 8px 30px rgba(215,184,120,.13);
+    }
+    .cta:hover { filter: brightness(1.07); transform: translateY(-2px); }
+    .cta svg { width: 21px; height: 21px; flex: 0 0 auto; }
+    .subtext { color: var(--muted); font-size: .78rem; text-align: center; margin: 11px 0 0; }
+    .details { margin-top: 28px; display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .detail { border: 1px solid var(--line); background: rgba(255,255,255,.025); border-radius: 14px; padding: 18px; }
+    .detail .symbol { color: var(--gold); font-size: 1.1rem; }
+    .detail h2 { font-size: .95rem; margin: 5px 0 4px; font-weight: 650; }
+    .detail p { color: var(--muted); font-size: .88rem; margin: 0; }
+    .closing { margin: 42px 0 0; text-align: center; padding: 28px 18px; border-top: 1px solid var(--line); }
+    .closing h2 { font: 400 clamp(1.8rem, 7vw, 2.7rem)/1.15 Georgia, serif; margin: 0 0 10px; }
+    .closing p { color: var(--muted); margin: 0 auto 20px; max-width: 520px; }
+    footer { color: #8d867b; text-align: center; font-size: .72rem; padding: 20px 0 30px; }
+    .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(13,13,13,.92); backdrop-filter: blur(12px); border-top: 1px solid var(--line); z-index: 10; }
+    .sticky-cta .cta { max-width: 620px; margin: 0 auto; padding: 13px 16px; }
+    @media (min-width: 760px) {
+      .wrap { width: min(100% - 56px, 1040px); }
+      header { padding: 28px 0; }
+      main { padding: 34px 0 60px; }
+      .hero { grid-template-columns: .9fr 1.1fr; gap: 64px; }
+      .portrait { min-height: 560px; }
+      .details { grid-template-columns: repeat(3, 1fr); margin-top: 52px; }
+      .cta { width: auto; min-width: 280px; display: inline-flex; }
+      .subtext { text-align: left; }
+      .sticky-cta { display: none; }
+      .closing .cta { margin: 0 auto; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand"><span class="brand-mark"><span>✦</span></span> Loira Misteriosa</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="headline">
+      <div class="portrait" role="img" aria-label="Painel decorativo em tons escuros e dourados; substitua por uma foto autorizada do perfil">
+        <div class="portrait-note">
+          <strong>Elegância, charme e discrição</strong>
+          Espaço reservado para uma foto autorizada do perfil
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <div class="eyebrow">Presidente Prudente · SP</div>
+        <h1 id="headline">Um encontro.<br><em>Uma boa história.</em></h1>
+        <div class="availability"><span class="dot"></span> Consulte a disponibilidade de hoje</div>
+        <p class="intro">Sou a Loira Misteriosa: 28 anos, charmosa, meiga e carinhosa. Gosto de uma boa conversa e de combinar cada detalhe com tranquilidade e respeito.</p>
+        <p class="intro">Atendimento combinado previamente, somente em motel. Entre em contato para consultar horários, valores e condições.</p>
+        <a class="cta whatsapp-link" href="#" aria-label="Consultar disponibilidade pelo WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0C5.55 0 .22 5.33.22 11.9c0 2.1.55 4.15 1.6 5.96L.12 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.49-8.42ZM12.1 21.78h-.01a9.88 9.88 0 0 1-5.03-1.37l-.36-.21-3.74.98 1-3.65-.24-.38a9.85 9.85 0 0 1-1.52-5.25c0-5.47 4.45-9.92 9.91-9.92a9.84 9.84 0 0 1 7.02 2.91 9.84 9.84 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.28-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.28.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+          Consultar pelo WhatsApp
+        </a>
+        <p class="subtext">Converse diretamente para confirmar disponibilidade e combinar os detalhes.</p>
+      </div>
+    </section>
+
+    <section class="details" aria-label="Informações do atendimento">
+      <article class="detail">
+        <div class="symbol">✦</div>
+        <h2>Um toque de exclusividade</h2>
+        <p>Consulte a condição especial disponível para a data do contato, sem compromisso.</p>
+      </article>
+      <article class="detail">
+        <div class="symbol">◇</div>
+        <h2>Combinação prévia</h2>
+        <p>Horários, valores e local são alinhados diretamente antes de confirmar.</p>
+      </article>
+      <article class="detail">
+        <div class="symbol">◌</div>
+        <h2>Respeito e discrição</h2>
+        <p>Conversa respeitosa, privacidade e consentimento são essenciais.</p>
+      </article>
+    </section>
+
+    <section class="closing">
+      <h2>Curioso para saber mais?</h2>
+      <p>Envie uma mensagem e consulte a disponibilidade de hoje. Se fizer sentido para você, combinamos os detalhes com clareza.</p>
+      <a class="cta whatsapp-link" href="#">Falar com a Loira Misteriosa</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Conteúdo destinado exclusivamente a maiores de 18 anos. Respeito, consentimento e segurança em primeiro lugar.
+    <br>© <span id="year"></span> Loira Misteriosa
+  </footer>
+
+  <div class="sticky-cta">
+    <a class="cta whatsapp-link" href="#">Consultar disponibilidade no WhatsApp</a>
+  </div>
+
+  <script>
+    /*
+      CONFIGURAÇÃO:
+      1. Substitua o valor abaixo pelo WhatsApp completo, com código do país e DDD,
+         somente números. Exemplo brasileiro: 5518999999999
+      2. Publique novamente o arquivo.
+    */
+    const WHATSAPP_NUMBER = "551899801"; // INCOMPLETO: inserir número completo antes de publicar
+    const DEFAULT_MESSAGE = "Olá! Vi sua página e gostaria de consultar a disponibilidade de hoje e os detalhes do atendimento.";
+    const validNumber = /^\d{12,13}$/.test(WHATSAPP_NUMBER);
+
+    document.querySelectorAll(".whatsapp-link").forEach(link => {
+      if (validNumber) {
+        link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(DEFAULT_MESSAGE);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      } else {
+        link.href = "javascript:void(0)";
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          alert("Configure o WhatsApp completo no código antes de publicar a página.");
+        });
+      }
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
